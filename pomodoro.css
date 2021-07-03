@@ -1,0 +1,58 @@
+body {
+    background-color: #ADBCA5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#cx {
+    height: 500px;
+    width: 900px;
+    background-color: #F9EFDD;
+    margin: 70px auto;
+    border: none;
+    border-radius: 15px; 
+    padding: 40px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.timer_foco, .timer_pausa, .timer {
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    justify-content: center;
+}
+
+.nome {
+    text-align: center;
+    color: #8C5F66;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.botao, .botao_min{
+    width: 15%;
+    padding: 15px 0;
+    margin: 15px;
+    background-color: #CB769E;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.botao_min {
+    width: 5%;
+}
+
+.botao:hover, .botao_min:hover {
+    background-color: #C15C8B;
+}
+
+.botoes {
+    text-align: center;
+}
+
