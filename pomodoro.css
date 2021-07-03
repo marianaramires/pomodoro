@@ -14,7 +14,7 @@ body {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
 }
 
-.timer {
+.timer_foco, .timer_pausa, .timer {
     display: flex;
     font-size: 25px;
     font-weight: bold;

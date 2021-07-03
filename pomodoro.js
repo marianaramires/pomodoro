@@ -8,13 +8,13 @@ var fs = document.getElementById('f_sec');
 var pm = document.getElementById('p_min');
 var ps = document.getElementById('p_sec');
 
-var notif = new Audio('pop.mp3');
-
-var comecarTimer;
+var comecarTimerFoco;
+var comecarTimerPausa
 
 comecar.addEventListener('click', function(){
-    if(comecarTimer === undefined) {
-        comecarTimer = setInterval(timer, 1000)
+    if(comecarTimerFoco === undefined && comecarTimerPausa === undefined) {
+        comecarTimerFoco = setInterval(timer_foco, 1000)
+        comecarTimerPausa = setInterval(timer_pausa, 1000)
     } else {
         alert("o timer já tá rodando >:( calma aí");
     }
@@ -22,7 +22,8 @@ comecar.addEventListener('click', function(){
 
 pausar.addEventListener('click', function(){
     pararIntervalo()
-    comecarTimer = undefined;
+    comecarTimerFoco = undefined;
+    comecarTimerPausa = undefined
 })
 
 reiniciar.addEventListener('click', function(){
@@ -32,12 +33,12 @@ reiniciar.addEventListener('click', function(){
     ps.innerText = 00;
 
     pararIntervalo()
-    comecarTimer = undefined;
+    comecarTimerFoco = undefined;
+    comecarTimerPausa = undefined
 })
 
-// começa o timer
-function timer() {
-    //countdown foco
+// começa o timer de foco
+function timer_foco() {
     if(fs.innerText != 0) {
         fs.innerText--;
     } else if(fm.innerText != 0 && fs.innerText == 0) {
@@ -45,13 +46,20 @@ function timer() {
         fm.innerText--;
     }
 
-    //countdown pausa
-    if(fm.innerText == 0 && fs.innerText == 0) {
-        ps.innerText--;
-        notif.play();
-    } else if(pm.innerText != 0 && ps.innerText == 0){
-        ps.innerText = 59;
-        pm.innerText--;
+    if(fm.innerText == 0 && fs.innerText == 1) {
+        document.getElementById('audio').play();
+    }
+}
+
+// timer de pausa
+function timer_pausa() {
+    if(fm.innerText == 0 && fs.innerText == 0){
+        if(ps.innerText != 0) {
+            ps.innerText--;
+        } else if(pm.innerText != 0 && ps.innerText == 0) {
+            ps.innerText = 59;
+            pm.innerText--;
+        }
     }
 
     // cont sessões
@@ -63,10 +71,15 @@ function timer() {
 
         document.getElementById('cont').innerText++;
     }
+
+    if(pm.innerText == 0 && ps.innerText == 1) {
+        document.getElementById('audio').play();
+    }
 }
 
 // para o timer
 function pararIntervalo() {
-    clearInterval(comecarTimer);
+    clearInterval(comecarTimerFoco)
+    clearInterval(comecarTimerPausa)
 }
 
