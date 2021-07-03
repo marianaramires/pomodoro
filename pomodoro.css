@@ -1,12 +1,12 @@
 body {
-    background-color: #adbca5;
+    background-color: #ADBCA5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #cx {
     height: 500px;
     width: 900px;
-    background-color: #F5E4C3;
+    background-color: #F9EFDD;
     margin: 70px auto;
     border: none;
     border-radius: 15px; 
@@ -24,7 +24,7 @@ body {
 
 .nome {
     text-align: center;
-    color: #8c5f66;
+    color: #8C5F66;
     font-size: 30px;
     font-weight: bold;
     margin: 10px;
@@ -34,7 +34,7 @@ body {
     width: 15%;
     padding: 15px 0;
     margin: 15px;
-    background-color: #cb769e;
+    background-color: #CB769E;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -49,7 +49,7 @@ body {
 }
 
 .botao:hover, .botao_min:hover {
-    background-color: #dca7bf;
+    background-color: #C15C8B;
 }
 
 .botoes {
