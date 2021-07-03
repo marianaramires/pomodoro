@@ -30,7 +30,7 @@ body {
     margin: 10px;
 }
 
-.botao {
+.botao, .botao_min{
     width: 15%;
     padding: 15px 0;
     margin: 15px;
@@ -44,7 +44,11 @@ body {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
 }
 
-.botao:hover {
+.botao_min {
+    width: 5%;
+}
+
+.botao:hover, .botao_min:hover {
     background-color: #dca7bf;
 }
 
