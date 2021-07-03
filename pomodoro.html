@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pomodoro.css">
+    <title>TIMER POMODORO</title>
+</head>
+
+<body>
+    <div id="cx">
+        <p id="foco" class="nome">Foco: </p>
+        <p id="pausa" class="nome">Pausa: </p>
+        <p id="sessao" class="nome">Sessões hoje:</p>
+
+        <!--timer de foco-->
+        <div id="foco_timer" class="timer">
+            <p id="f_min">25</p><p class="separador">:</p><p id="f_sec">00</p>
+        </div>
+
+        <p id="cont" class="timer">0</p>
+
+        <!--timer de pausa-->
+        <div id="pausa_timer" class="timer">
+            <p id="p_min">25</p><p class="separador">:</p><p id="p_sec">00</p>
+        </div>
+
+        <button id="comecar" class="btn">Começar</button>
+        <button id="pausar" class="btn">Pausar</button>
+        <button id="reiniciar" class="btn">Reiniciar</button>
+    </div>
+    
+    <script src="pomodoro.js"></script>
+</body>
+</html>
