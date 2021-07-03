@@ -18,13 +18,22 @@ comecar.addEventListener('click', function(){
     }
 })
 
+pausar.addEventListener('click', function(){
+    pararIntervalo()
+    comecarTimer = undefined;
+})
+
 reiniciar.addEventListener('click', function(){
     fm.innerText = 25;
     fs.innerText = 00;
     pm.innerText = 5;
     ps.innerText = 00;
+
+    pararIntervalo()
+    comecarTimer = undefined;
 })
 
+// começa o timer
 function timer() {
     //countdown foco
     if(fs.innerText != 0) {
@@ -52,3 +61,9 @@ function timer() {
         document.getElementById('cont').innerText++;
     }
 }
+
+// para o timer
+function pararIntervalo() {
+    clearInterval(comecarTimer);
+}
+
