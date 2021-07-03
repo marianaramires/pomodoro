@@ -9,25 +9,26 @@
 
 <body>
     <div id="cx">
-        <p id="foco" class="nome">Foco: </p>
-        <p id="pausa" class="nome">Pausa: </p>
-        <p id="sessao" class="nome">Sessões hoje:</p>
-
         <!--timer de foco-->
+        <p id="foco" class="nome">Foco: </p>
         <div id="foco_timer" class="timer">
             <p id="f_min">25</p><p class="separador">:</p><p id="f_sec">00</p>
         </div>
 
-        <p id="cont" class="timer">0</p>
-
         <!--timer de pausa-->
+        <p id="pausa" class="nome">Pausa: </p>
         <div id="pausa_timer" class="timer">
             <p id="p_min">5</p><p class="separador">:</p><p id="p_sec">00</p>
         </div>
 
-        <button id="comecar" class="btn">Começar</button>
-        <button id="pausar" class="btn">Pausar</button>
-        <button id="reiniciar" class="btn">Reiniciar</button>
+        <p id="sessao" class="nome">Sessões:</p>
+        <p id="cont" class="timer">0</p>
+
+        <div class="botoes">
+            <button id="comecar" class="botao">Começar</button>
+            <button id="pausar" class="botao">Pausar</button>
+            <button id="reiniciar" class="botao">Reiniciar</button>
+        </div>
     </div>
     
     <script src="pomodoro.js"></script>

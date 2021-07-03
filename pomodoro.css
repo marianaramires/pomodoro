@@ -1,0 +1,54 @@
+body {
+    background-color: #adbca5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#cx {
+    height: 500px;
+    width: 900px;
+    background-color: #F5E4C3;
+    margin: 70px auto;
+    border: none;
+    border-radius: 15px; 
+    padding: 40px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.timer {
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    justify-content: center;
+}
+
+.nome {
+    text-align: center;
+    color: #8c5f66;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.botao {
+    width: 15%;
+    padding: 15px 0;
+    margin: 15px;
+    background-color: #cb769e;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.botao:hover {
+    background-color: #dca7bf;
+}
+
+.botoes {
+    text-align: center;
+}
+
