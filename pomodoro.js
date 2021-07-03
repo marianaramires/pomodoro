@@ -18,6 +18,13 @@ comecar.addEventListener('click', function(){
     }
 })
 
+reiniciar.addEventListener('click', function(){
+    fm.innerText = 25;
+    fs.innerText = 00;
+    pm.innerText = 5;
+    ps.innerText = 00;
+})
+
 function timer() {
     //countdown foco
     if(fs.innerText != 0) {
