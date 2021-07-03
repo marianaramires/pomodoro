@@ -8,6 +8,8 @@ var fs = document.getElementById('f_sec');
 var pm = document.getElementById('p_min');
 var ps = document.getElementById('p_sec');
 
+var notif = new Audio('pop.mp3');
+
 var comecarTimer;
 
 comecar.addEventListener('click', function(){
@@ -46,7 +48,8 @@ function timer() {
     //countdown pausa
     if(fm.innerText == 0 && fs.innerText == 0) {
         ps.innerText--;
-    } else if(pm.innerText != 0 && pm.innerText != 5 && ps.innerText == 0){
+        notif.play();
+    } else if(pm.innerText != 0 && ps.innerText == 0){
         ps.innerText = 59;
         pm.innerText--;
     }
